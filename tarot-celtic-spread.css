@@ -18,11 +18,24 @@
  button {
   width: 200px;
   padding: 10px;
+  margin: 10px;
   font-size: 20px;
   background-color: lightseagreen;
   color: white;
   border-radius: 5px;
   border-color:  white;
+  transition: all 0.3s ease;
+ }
+
+ button:hover {
+ 	background-color: teal;
+ 	cursor: pointer;
+  scale: 1.1;
+  filter: drop-shadow(0 0 20px rgba(236, 240, 241, 0.5));
+ }
+
+ button:active {
+ 	background-color: rgb(10, 224, 49);
  }
 
 .spread-container {
@@ -105,7 +118,10 @@
   top: 20px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
+  button {
+    width: 180px;
+  }
   .spread-container {
     width: 100vw !important;           /* Full viewport width */
     max-width: 100% !important;
