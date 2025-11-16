@@ -11,12 +11,26 @@
  	text-align: center;
  }
 
+ h1 {
+ 	margin: 20px 0;
+ }
+
+ button {
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: lightseagreen;
+  color: white;
+  border-radius: 5px;
+  border-color:  white;
+ }
+
 .spread-container {
   display: flex;
   position: relative;
   width: 600px;
   height: 600px;
-  margin: 100px auto;
+  margin: 20px auto;
   background-color: green;
   border: solid 2px white;
   border-radius: 5px;
@@ -27,7 +41,13 @@
   height: 120px;
   width: 60px;
   border-radius: 5px;
-  filter: drop-shadow(2px 4px 6px rgb(3, 88, 22));
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+  z-index: 100;
 }
 
 #card-1 {

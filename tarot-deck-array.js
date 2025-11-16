@@ -78,3 +78,5 @@ const cardsDeck = [
   { id: 77, image: "Tarot-deck/Queen-of-pentacles.jpg", name: "Queen of Pentacles" },
   { id: 78, image: "Tarot-deck/King-of-pentacles.jpg", name: "King of Pentacles" },
 ];
+
+cardsBackArray = [{ image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }, { image: '<img src="tarot-deck/cards-back.jpg" class="small-card">' }];
