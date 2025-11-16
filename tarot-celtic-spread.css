@@ -104,3 +104,29 @@
   right: 8%;
   top: 20px;
 }
+
+@media (max-width: 700px) {
+  .spread-container {
+    width: 100vw !important;           /* Full viewport width */
+    max-width: 100% !important;
+    margin: 20px 0 !important;         /* Only top/bottom */
+    padding: 12px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    background-color: green;
+    border: solid 2px white;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+}
