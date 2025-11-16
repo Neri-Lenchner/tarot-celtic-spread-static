@@ -4,6 +4,13 @@
  	padding: 0;
  }
 
+ body {
+ 	background-color: #2f0303;
+ 	color: white;
+ 	font-family: Arial, sans-serif;
+ 	text-align: center;
+ }
+
 .spread-container {
   display: flex;
   position: relative;
@@ -11,66 +18,69 @@
   height: 600px;
   margin: 100px auto;
   background-color: green;
+  border: solid 2px white;
+  border-radius: 5px;
 }
 
 .card {
   position: absolute;
   height: 120px;
   width: 60px;
-  border-radius: 5px;;
+  border-radius: 5px;
+  filter: drop-shadow(2px 4px 6px rgb(3, 88, 22));
 }
 
 #card-1 {
   top: 50%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 
 #card-2 {
   top: 50%;
-  left: 50%;
+  left: 40%;
 }
 
 #card-3 {
   top: 50%;
-  right: 20%;
+  right: 30%;
   transform: translate(0, -50%);
 }
 
 #card-4 {
-  left: 50%;
+  left: 40%;
   bottom: 20px;
   transform: translate(-50%);
 }
 
 #card-5 {
   top: 50%;
-  left: 20%;
+  left: 10%;
   transform: translate(0, -50%);
 }
 
 #card-6 {
-  left: 50%;
+  left: 40%;
   top: 20px;
   transform: translate(-50%);
 }
 
 #card-7 {
-  right: 5%;
+  right: 8%;
   bottom: 20px;
 }
 
 #card-8 {
-  right: 5%;
+  right: 8%;
   bottom: 165px;
 }
 
 #card-9 {
-  right: 5%;
+  right: 8%;
   top: 165px;
 }
 
 #card-10 {
-  right: 5%;
+  right: 8%;
   top: 20px;
 }
