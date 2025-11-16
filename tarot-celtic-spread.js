@@ -1,50 +1,56 @@
-const card1 = document.querySelector('.js-card-1');
-const card2 = document.querySelector('.js-card-2');
-const card3 = document.querySelector('.js-card-3');
-const card4 = document.querySelector('.js-card-4');
-const card5 = document.querySelector('.js-card-5');
-const card6 = document.querySelector('.js-card-6');
-const card7 = document.querySelector('.js-card-7');
-const card8 = document.querySelector('.js-card-8');
-const card9 = document.querySelector('.js-card-9');
-const card10 = document.querySelector('.js-card-10');
+// 1. Select the <img> elements (not the divs)
+const card1 = document.querySelector('#card-1 img');
+const card2 = document.querySelector('#card-2 img');
+const card3 = document.querySelector('#card-3 img');
+const card4 = document.querySelector('#card-4 img');
+const card5 = document.querySelector('#card-5 img');
+const card6 = document.querySelector('#card-6 img');
+const card7 = document.querySelector('#card-7 img');
+const card8 = document.querySelector('#card-8 img');
+const card9 = document.querySelector('#card-9 img');
+const card10 = document.querySelector('#card-10 img');
+
+// 2. Define cardsBackArray: 10 back cards (if not in tarot-deck-array.js)
+const cardsBackArray = Array(10).fill({ image: 'Tarot-deck/cards-back.jpg' });
 
 let curretArray = JSON.parse(localStorage.getItem('spread')) || cardsBackArray;
 
-card1.innerHTML = curretArray[0].image;
-card2.innerHTML = curretArray[1].image;
-card3.innerHTML = curretArray[2].image;
-card4.innerHTML = curretArray[3].image;
-card5.innerHTML = curretArray[4].image;
-card6.innerHTML = curretArray[5].image;
-card7.innerHTML = curretArray[6].image;
-card8.innerHTML = curretArray[7].image;
-card9.innerHTML = curretArray[8].image;
-card10.innerHTML = curretArray[9].image;
+// 3. Set initial images using .src
+card1.src = curretArray[0].image;
+card2.src = curretArray[1].image;
+card3.src = curretArray[2].image;
+card4.src = curretArray[3].image;
+card5.src = curretArray[4].image;
+card6.src = curretArray[5].image;
+card7.src = curretArray[6].image;
+card8.src = curretArray[7].image;
+card9.src = curretArray[8].image;
+card10.src = curretArray[9].image;
 
 function shuffle(array) {
   const newArray = [...array];
   for (let i = newArray.length - 1; i >= 0; i--) {
     const random = Math.floor(Math.random() * (i + 1));
     [newArray[i], newArray[random]] = [newArray[random], newArray[i]];
-
-    spreadCards(newArray);
-    console.log(newArray);
-    localStorage.setItem('spread', JSON.stringify(newArray));
   }
+  // Move spreadCards OUTSIDE the loop
+  spreadCards(newArray);
+  console.log(newArray);
+  localStorage.setItem('spread', JSON.stringify(newArray));
 }
 
 function spreadCards(array) {
-  card1.innerHTML = array[0].image;
-  card2.innerHTML = array[1].image;
-  card3.innerHTML = array[2].image;
-  card4.innerHTML = array[3].image;
-  card5.innerHTML = array[4].image;
-  card6.innerHTML = array[5].image;
-  card7.innerHTML = array[6].image;
-  card8.innerHTML = array[7].image;
-  card9.innerHTML = array[8].image;
-  card10.innerHTML = array[9].image;
+  // Use .src instead of .innerHTML
+  card1.src = array[0].image;
+  card2.src = array[1].image;
+  card3.src = array[2].image;
+  card4.src = array[3].image;
+  card5.src = array[4].image;
+  card6.src = array[5].image;
+  card7.src = array[6].image;
+  card8.src = array[7].image;
+  card9.src = array[8].image;
+  card10.src = array[9].image;
 }
 
 const spreadButton = document.querySelector('.js-spread-button');
@@ -56,5 +62,3 @@ const clearSpreadButton = document.querySelector('.js-clear-spread-button');
 clearSpreadButton.addEventListener('click', () => {
   shuffle(cardsBackArray);
 });
-
-
